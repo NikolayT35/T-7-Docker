@@ -1,13 +1,13 @@
 version: '3.5'
 services:
-  mysql:
-    image: mysql:8.0.19
+  postgres:
+    image: library/postgres:12-alpine
     ports:
-      - '3306:3306'
+      - '5432:5432'
     volumes:
-      - ./data:/var/lib/mysql
+      - ./data:/var/lib/postgresql
     environment:
-      - MYSQL_RANDOM_ROOT_PASSWORD=yes
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=9mREsvXDs9Gk89Ef
+      - POSTGRES_RANDOM_ROOT_PASSWORD=yes
+      - POSTGRES_DATABASE=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=9mREsvXDs9Gk89Ef
